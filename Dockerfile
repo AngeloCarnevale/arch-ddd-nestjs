@@ -6,8 +6,9 @@ RUN mkdir -p /app
 
 COPY package.json /app
 
-RUN npm cache clean\
-    npm install --frozen-lockfile
+RUN npm cache clean --force \
+  rm -rf node_modules \
+  npm install --legacy-peer-deps
 
 COPY . /app
 
