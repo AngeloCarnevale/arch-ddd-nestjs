@@ -12,5 +12,3 @@ RUN npm cache clean\
 COPY . /app
 
 EXPOSE 3003
-
-ENTRYPOINT [ "npm", "run", "start:dev" ]
