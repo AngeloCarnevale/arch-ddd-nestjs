@@ -4,7 +4,7 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: api
-    entrypoint: sh -c 'npm install --frozen-lockfile && npm run start:dev'
+    entrypoint: sh -c 'npm install --frozen-lockfile && npm run start:swc'
     depends_on:
       - mongodb
     networks:
